@@ -1,0 +1,22 @@
+.mat-form-field-infix {
+    display: block;
+    position: relative;
+    flex: auto;
+    min-width: 0;
+    /* width: 215px !important; */
+}
+.employee{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .topcheck {
+        top: 11px !important;
+        position: relative;
+    }
+  }
+
+
+

@@ -1,0 +1,1109 @@
+ <!-- Content Wrapper. Contains page content -->
+ <app-header></app-header>
+ <app-sidebar></app-sidebar>
+ <div class="content-wrapper">
+   <section class="content-header">
+     <h1> Empolyee Profile </h1>
+     <ol class="breadcrumb">
+       <li class="breadcrumb-item">
+         <a href="#">
+           <i class="fa fa-dashboard"></i> Home </a>
+       </li>
+       <li class="breadcrumb-item">
+         <a href="#">Empolyee Profile</a>
+       </li>
+       <li class="breadcrumb-item active">Empolyee Profile</li>
+     </ol>
+     <!-- <button (click)="simpleAlert()">Simple Alert</button>
+     <button (click)="alertWithSuccess()">Alert with Success</button> -->
+     
+   </section>
+   <section class="content">
+     <div class="row">
+       <div class="col-12">
+         <div class="box">
+           <div class="box-header">
+             <div class="employee">
+               <button type="button" class="btn bg-orange btn-flat margin" data-toggle="modal" data-target="#exampleModalCenteradd">
+                 <b>Add Employee Profile</b>
+               </button>
+             </div>
+           </div>
+           <hr>
+           <!-- /.box-header -->
+           <div class="box-body">
+             <div class="">
+               <table id="example1" class="table table-bordered table-striped table-responsive	">
+                 <thead>
+                   <tr>
+                     <th>S.No.</th>
+                     <th>First Name</th>
+                     <th>Middle Name</th>
+                     <th>Last Name</th>
+                     <th>Gender</th>
+                     <th>Date of Birth</th>
+                     <th>Date of Birth In Words</th>
+                     <th>Height ( cm / ft / inches )</th>
+                     <th>Identification Marks</th>
+                     <th>Blood Group</th>
+                     <th>Father Name</th>
+                     <th>Mother Name</th>
+                     <th>Marital Status</th>
+                     <th>Spouse Name</th>
+                     <th>Disability Status</th>
+                     <th>Type of Disability</th>
+                     <th>Percentage of Disability</th>
+                     <th>Nationality</th>
+                     <th>Social Category</th>
+                     <th>Belongs to Minority</th>
+                     <th>Mobile No</th>
+                     <th>Email Id</th>
+                     <th>PAN</th>
+                     <th>GRP/Pran Type</th>
+                     <th>AADHAAR Ref No</th>
+                     <th>State Insurance Number</th>
+                     <th>RGHS No</th>
+                     <th>Auction</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td>1.</td>
+                     <td>Ram</td>
+                     <td>Dayal</td>
+                     <td>Bharti</td>
+                     <td>Male</td>
+                     <td>2011/04/25</td>
+                     <td>January 1, two thousand and twenty two</td>
+                     <td>5 fit 6 inch </td>
+                     <td>Black</td>
+                     <td>O+</td>
+                     <td>Ramesh Kumar</td>
+                     <td>Rita </td>
+                     <td>Unmaried</td>
+                     <td>Yes</td>
+                     <td>50%</td>
+                     <td>Indian</td>
+                     <td>Web Designer</td>
+                     <td>Ramesh Kumar</td>
+                     <td>OBC</td>
+                     <td>098765644321</td>
+                     <td>ram@gmail.com</td>
+                     <td>123456789012</td>
+                     <td>GRP</td>
+                     <td>12345</td>
+                     <td>123456</td>
+                     <td>1234560</td>
+                     <td>1234560</td>
+                     <td class="d-flex">
+                       <button class="btn btn-info  btn-sm mr-2">
+                         <i class="fa fa-edit" data-toggle="modal" data-target="#exampleModalCenteredit"></i>
+                       </button>
+                       <button class="btn btn-warning  btn-sm mr-2">
+                         <i class="fa fa-eye"></i>
+                       </button>
+                        <button class="btn btn-danger btn-sm" (click)="confirmBox()" style="border: 0px;"> <i class="fa fa-trash"></i></button>
+                     </td>
+                   </tr>
+                 </tbody>
+               </table>
+             </div>
+           </div>
+           <!-- /.box-body -->
+         </div>
+         <!-- /.box -->
+       </div>
+       <!-- /.col -->
+     </div>
+     <!-- /.row -->
+     <!-- 2222 first moda add  employe profile -->
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModalCenteredit" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+       <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+           <div class="modal-header" style="border-bottom: 1px solid #ff6028">
+             <h2 class="modal-title" id="exampleModalLongTitle">Employee Profile</h2>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+           </div>
+           <div class="modal-body">
+             <!-- Nav tabs -->
+             <ul class="nav nav-tabs" role="tablist">
+               <li class="nav-item">
+                 <a class="nav-link active" data-toggle="tab" href="#Employee-Personal-Details" role="tab">
+                   <span class="hidden-sm-up">
+                     <i class="ion-home"></i>
+                   </span>
+                   <span class="hidden-xs-down">Employee Personal Details</span>
+                 </a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link" data-toggle="tab" href="#Employee-Official-Details" role="tab">
+                   <span class="hidden-sm-up">
+                     <i class="ion-person"></i>
+                   </span>
+                   <span class="hidden-xs-down">Employee Official Details</span>
+                 </a>
+               </li>
+             </ul>
+             <!-- Tab panes -->
+             <div class="tab-content tabcontent-border">
+               <div class="tab-pane active" id="Employee-Personal-Details" role="tabpanel">
+                 <div class="row">
+                   <div class="col-md-6">
+                     <div class="topcheck" style="top: 30px;position: relative;">
+                       <div class="form-check">
+                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                         <label class="form-check-label" for="exampleCheck1">Through JANADHAAR</label>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="col-md-6">
+                     <form action="#" method="get" class="sidebar-form">
+                       <div class="">
+                         <div class="input-group">
+                           <input type="text" name="q" class="form-control" placeholder="Search...">
+                           <span class="input-group-btn">
+                             <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                               <i class="fa fa-search text-black"></i>
+                             </button>
+                           </span>
+                         </div>
+                       </div>
+                     </form>
+                   </div>
+                 </div>
+
+
+                 <!--  start form page  -->
+                 
+                 <form [formGroup]="empPerDetForm" (ngSubmit)="onSubmit()">
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <div class="input-group mb-2 mr-sm-2">
+                         <div class="input-group-prepend">
+                           <div class="input-group-text form-control">
+                             <select class="form-select" formControlName="salution"
+                              [ngClass]="{'is-invalid':submitted && empPerDetForm.controls['salution'].errors}" >
+                               <option selected>Mr.</option>
+                               <option value="1">Mis.</option>
+                             </select>
+                             <div *ngIf="submitted && empPerDetForm.controls['salution'].errors" class="text-danger">
+                              <div *ngIf="submitted && empPerDetForm.controls['salution'].errors['required']">
+                                Please Enter Mr./ Mis.
+                              </div>
+                             </div>
+                           </div>
+                         </div>
+                         <input type="text" name="text" class="form-control" pattern="^(\w\w+)\s(\w+)$" (keypress)="letterOnly($event)">
+                         
+                       </div>
+                     </div>
+                   </div>
+                   <!-- 1 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>First Name <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="text" class="form-control" pattern="[a-zA-Z ]*" formControlName="firstName"
+                         [ngClass]="{'is-invalid':submitted && empPerDetForm.controls['firstName'].errors}">
+                         <div *ngIf="submitted && empPerDetForm.controls['firstName'].errors" class="text-danger">
+                          <div *ngIf="submitted && empPerDetForm.controls['firstName'].errors['required']">
+                            Please Enter First Name
+                          </div>
+                         </div>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Middle Name</label>
+                       <input type="text" name="text" class="form-control" pattern="[a-zA-Z ]*" formControlName="middleName"
+                         [ngClass]="{'is-invalid':submitted && empPerDetForm.controls['middleName'].errors}">
+                         <div *ngIf="submitted && empPerDetForm.controls['middleName'].errors" class="text-danger">
+                          <div *ngIf="submitted && empPerDetForm.controls['middleName'].errors['required']">
+                            Please Enter Middle  Name 
+                          </div>
+                         </div>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Last Name</label>
+                       <input type="text" name="text" class="form-control" pattern="[a-zA-Z ]*" formControlName="lastName"
+                         [ngClass]="{'is-invalid':submitted && empPerDetForm.controls['lastName'].errors}">
+                         <div *ngIf="submitted && empPerDetForm.controls['lastName'].errors" class="text-danger">
+                          <div *ngIf="submitted && empPerDetForm.controls['lastName'].errors['required']">
+                            Please Enter Last  Name 
+                          </div>
+                         </div>
+                     </div>
+                   </div>
+                   <!-- 2 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Gender </label>
+                          <select class="form-select form-control" formControlName="gender"
+                              [ngClass]="{'is-invalid':submitted && empPerDetForm.controls['gender'].errors}" >
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                                <option value="3">Other</option>
+                             </select>
+                             <div *ngIf="submitted && empPerDetForm.controls['gender'].errors" class="text-danger">
+                              <div *ngIf="submitted && empPerDetForm.controls['gender'].errors['required']">
+                                Please Enter Gender 
+                              </div>
+                             </div>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Date of Birth <span class="text-red">*</span>
+                       </label>
+                       <input type="date" name="date" class="form-control" formControlName="date"[ngClass]="{'is-invalid':submitted && empPerDetForm.controls['date'].errors}">
+                       <div *ngIf="submitted && empPerDetForm.controls['date'].errors" class="text-danger">
+                        <div *ngIf="submitted && empPerDetForm.controls['date'].errors['required']">
+                          Please Enter Date
+                        </div>
+                       </div>
+                     </div>
+                     
+                     <div class="col-md-4">
+                       <label for="">Date of Birth In Words</label>
+                       <input type="text" name="word" class="form-control" formControlName="word" [ngClass]="{'is-invalid':submitted && empPerDetForm.controls['word'].errors}">
+
+                       <div *ngIf="submitted && empPerDetForm.controls['word'].errors" class="text-danger">
+                        <div *ngIf="submitted && empPerDetForm.controls['word'].errors['required']">
+                          Please Enter Date
+                        </div>
+                       </div>
+                     </div>
+                   </div>
+                   <!-- 3 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Height ( cm / ft / inches ) </label>
+                       <input type="text" name="height" class="form-control" formControlName="height" [ngClass]="{'is-invalid':submitted && empPerDetForm.controls['height'].errors}">
+                       <div *ngIf="submitted && empPerDetForm.controls['height'].errors" class="text-danger">
+                        <div *ngIf="submitted && empPerDetForm.controls['height'].errors['required']">
+                          Please Enter Height ( cm / ft / inches ) 
+                        </div>
+                       </div>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Identification Marks <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="Identification" class="form-control" formControlName="Identification" [ngClass]="{'is-invalid':submitted && empPerDetForm.controls['Identification'].errors}">
+                       <div *ngIf="submitted && empPerDetForm.controls['Identification'].errors" class="text-danger">
+                        <div *ngIf="submitted && empPerDetForm.controls['Identification'].errors['required']">
+                          Please Enter Identification Marks 
+                        </div>
+                       </div>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Blood Group</label>
+                       <select class="form-select form-control" formControlName="Blood_Group"
+                       [ngClass]="{'is-invalid':submitted && empPerDetForm.controls['gender'].errors}" >
+                       <option value="1">O-</option>
+                       <option value="2">B+</option>
+                       <option value="3">AB</option>
+                      </select>
+                      <div *ngIf="submitted && empPerDetForm.controls['Blood_Group'].errors" class="text-danger">
+                       <div *ngIf="submitted && empPerDetForm.controls['Blood_Group'].errors['required']">
+                         Please Enter Blood Group
+                       </div>
+                      </div>
+                     </div>
+                   </div>
+                   <!-- 4 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Father Name </label>
+                       <input type="text" name="text" class="form-control" (keypress)="letterOnly($event)" required="" aria-invalid="false">
+                          
+                      </div>
+                     <div class="col-md-4">
+                       <label for="">Mother Name </label>
+                       <input type="text" name="text" class="form-control" (keypress)="letterOnly($event)" required="" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 5 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Marital Status <span class="text-red">*</span>
+                       </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Maried</option>
+                         <option value="1">Unmaried</option>
+                         <option value="1">Maried</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Spouse Name</label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 6 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label for="">Disability Status</label>
+                       <div class="form-control">
+                         <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                           <label class="form-check-label" for="inlineRadio1">Yes</label>
+                         </div>
+                         <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                           <label class="form-check-label" for="inlineRadio2">No</label>
+                         </div>
+                       </div>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Type of Disability <span class="text-red">*</span>
+                       </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Type of Disability</option>
+                         <option value="1">Type of Disability</option>
+                         <option value="1">Type of Disability</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Percentage of Disability</label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 7 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Nationality <span class="text-red">*</span>
+                       </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Indian</option>
+                         <option value="1">China</option>
+                         <option value="2">Ruse</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Social Category <span class="text-red">*</span>
+                       </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>SC</option>
+                         <option value="1">ST</option>
+                         <option value="2">OBC</option>
+                         <option value="3">General</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Belongs to Minority</label>
+                       <div class="form-control">
+                         <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                           <label class="form-check-label" for="inlineRadio1">Yes</label>
+                         </div>
+                         <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                           <label class="form-check-label" for="inlineRadio2">No</label>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <!-- 8 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Mobile No.</label>
+                       <input type="text" name="text" class="form-control" (keypress)="numberOnly($event)" required="" onclick="numberOnly"  aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Email ID</label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">PAN</label>
+                       <input type="text" name="text" class="form-control" required="" placeholder="QWERTY1234M " aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 9 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>GRP/Pran Type <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false" disabled>
+                     </div>
+                   </div>
+                   <!-- 10 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>AADHAAR Ref No </label>
+                       <input type="text" name="text" class="form-control" (keypress)="numberOnly($event)" required="" aria-invalid="false" disabled>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">State Insurance Number</label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false" disabled>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">RGHS No.</label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false" disabled>
+                     </div>
+                   </div>
+                   <div class="m-10 d-flex">
+                    <div class="m-10 d-flex">
+                      <button type="submit" class="btn btn-info btn-flat margin w-100">Submit</button>
+                      <button type="reset" class="btn btn-danger btn-flat margin w-100" onclick="reset">Reset</button>
+                      </div>
+                   </div>
+                 </form>
+
+                    <!-- end form page  -->
+
+               </div>
+               <div class="tab-pane pad" id="Employee-Official-Details" role="tabpanel">
+                 <form action="">
+                   <!-- 1 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Entitlement Status </label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 1 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Employee Type </label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Service Category <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Sub Service Category/cadre </label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 2 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label for="">Gazetted/ Non-Gazetted </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Gazetted</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Service Quota <span class="text-red">*</span>
+                       </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Blood Group</option>
+                         <option value="1">Yes</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                       </select>
+                     </div>
+                   </div>
+                   <!-- 3 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Parent Department</label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Finance Department </option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Current Department <span class="text-red">*</span>
+                       </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Home Department</option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Current Designation</label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Secretary</option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                       </select>
+                     </div>
+                   </div>
+                   <!-- 4 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Appointment Order No. <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Appointment Order Date <span class="text-red">*</span>
+                       </label>
+                       <input type="date" name="date" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Order Issuing Authority / Office </label>
+                       <input type="text" name="text" class="form-control" disabled required="" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 5 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Appointing Authority <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Joining / Charge Taken Date <span class="text-red">*</span>
+                       </label>
+                       <input type="date" name="date" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Joining Time</label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 6 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label for="">Annual Increment Opted Date <span class="text-red">*</span>
+                       </label>
+                       <input type="date" name="date" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Superanuation Date <span class="text-red">*</span>
+                       </label>
+                       <input type="date" name="date" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Belongs to Minority</label>
+                       <div class="form-control">
+                         <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                           <label class="form-check-label" for="inlineRadio1">Yes</label>
+                         </div>
+                         <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                           <label class="form-check-label" for="inlineRadio2">No</label>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <!-- 7 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>GRP/Pran Type <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="text" class="form-control" disabled required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">State Insurance Number <span class="text-red">*</span>
+                       </label>
+                       <input type="date" name="date" class="form-control" disabled required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">RGHS No.</label>
+                       <input type="text" name="text" class="form-control" disabled required="" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 8 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>GPF No.</label>
+                       <input type="text" name="text" class="form-control" disabled required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Belt No. <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="date" class="form-control" disabled required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">PLI No.</label>
+                       <input type="text" name="text" class="form-control" disabled required="" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 9 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>I.A.S CPNF No.</label>
+                       <input type="text" name="text" class="form-control" disabled required="" aria-invalid="false">
+                     </div>
+                   </div>
+                   <div class="m-10 d-flex">
+                     <button type="submit" class="btn btn-info btn-flat margin w-100">Submit</button>
+                     <button type="reset" class="btn btn-danger btn-flat margin w-100" onclick="reset">Reset</button>
+                   </div>
+                 </form>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <!-- 2222 modal end add employee profile  -->
+     <!-- Modal  start edite employee profilre  -->
+     <div class="modal fade" id="exampleModalCenteradd" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+       <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+           <div class="modal-header" style="border-bottom: 1px solid #ff6028">
+             <h2 class="modal-title" id="exampleModalLongTitle">Employee Profile</h2>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+           </div>
+           <div class="modal-body">
+             <!-- Nav tabs -->
+             <ul class="nav nav-tabs" role="tablist">
+               <li class="nav-item">
+                 <a class="nav-link active" data-toggle="tab" href="#Employee-Personal-Detailsadd" role="tab">
+                   <span class="hidden-sm-up">
+                     <i class="ion-home"></i>
+                   </span>
+                   <span class="hidden-xs-down">Employee Personal Details</span>
+                 </a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link" data-toggle="tab" href="#Employee-Official-Detailsadd" role="tab">
+                   <span class="hidden-sm-up">
+                     <i class="ion-person"></i>
+                   </span>
+                   <span class="hidden-xs-down">Employee Official Details</span>
+                 </a>
+               </li>
+             </ul>
+             <!-- Tab panes -->
+             <div class="tab-content tabcontent-border">
+               <div class="tab-pane active" id="Employee-Personal-Detailsadd" role="tabpanel">
+                 <div class="row">
+                   <div class="col-md-6">
+                     <div class="topcheck" style="top: 30px;position: relative;">
+                       <div class="form-check">
+                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                         <label class="form-check-label" for="exampleCheck1">Through JANADHAAR</label>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="col-md-6">
+                     <form action="#" method="get" class="sidebar-form">
+                       <div class="">
+                         <div class="input-group">
+                           <input type="text" name="q" class="form-control" placeholder="Search...">
+                           <span class="input-group-btn">
+                             <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                               <i class="fa fa-search text-black"></i>
+                             </button>
+                           </span>
+                         </div>
+                       </div>
+                     </form>
+                   </div>
+                 </div>
+                 <form>
+                   <!-- 0 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <div class="input-group mb-2 mr-sm-2">
+                         <div class="input-group-prepend">
+                           <div class="input-group-text">
+                             <select class="form-select" aria-label="Default select example">
+                               <option selected>Mr.</option>
+                               <option value="1">Mis.</option>
+                             </select>
+                           </div>
+                         </div>
+                         <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                           <option selected></option>
+                           <option value="1">Ram Dayal</option>
+                           <option value="2">Rakesh</option>
+                           <option value="3">Ramdayal</option>
+                         </select>
+                       </div>
+                     </div>
+                   </div>
+                   <!-- 1 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>First Name <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="text" class="form-control" required="">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Middle Name</label>
+                       <input type="text" name="text" class="form-control" required="">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Last Name</label>
+                       <input type="text" name="text" class="form-control" required="">
+                     </div>
+                   </div>
+                   <!-- 2 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Gender </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Select Gender</option>
+                         <option value="1">Male</option>
+                         <option value="2">Female</option>
+                         <option value="3">Other</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Date of Birth <span class="text-red">*</span>
+                       </label>
+                       <input type="date" name="date" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Date of Birth In Words</label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 3 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Height ( cm / ft / inches ) </label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Identification Marks <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Blood Group</label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Blood Group</option>
+                         <option value="1">O-</option>
+                         <option value="2">B+</option>
+                         <option value="3">AB</option>
+                       </select>
+                     </div>
+                   </div>
+                   <!-- 4 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Father Name </label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Mother Name </label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 5 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Marital Status <span class="text-red">*</span>
+                       </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Maried</option>
+                         <option value="1">Unmaried</option>
+                         <option value="1">Maried</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Spouse Name</label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 6 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label for="">Disability Status</label>
+                       <div class="form-control">
+                         <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                           <label class="form-check-label" for="inlineRadio1">Yes</label>
+                         </div>
+                         <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                           <label class="form-check-label" for="inlineRadio2">No</label>
+                         </div>
+                       </div>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Type of Disability <span class="text-red">*</span>
+                       </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Type of Disability</option>
+                         <option value="1">Type of Disability</option>
+                         <option value="1">Type of Disability</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Percentage of Disability</label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 7 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Nationality <span class="text-red">*</span>
+                       </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Indian</option>
+                         <option value="1">China</option>
+                         <option value="2">Ruse</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Social Category <span class="text-red">*</span>
+                       </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>SC</option>
+                         <option value="1">ST</option>
+                         <option value="2">OBC</option>
+                         <option value="3">General</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Belongs to Minority</label>
+                       <div class="form-control">
+                         <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                           <label class="form-check-label" for="inlineRadio1">Yes</label>
+                         </div>
+                         <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                           <label class="form-check-label" for="inlineRadio2">No</label>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <!-- 8 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Mobile No.</label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Email ID</label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">PAN</label>
+                       <input type="text" name="text" class="form-control" required="" placeholder="QWERTY1234M " aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 9 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>GRP/Pran Type <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false" disabled>
+                     </div>
+                   </div>
+                   <!-- 10 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>AADHAAR Ref No </label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false" disabled>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">State Insurance Number</label>
+                       <input type="text" name="text" class="form-control" required="" aria-invalid="false" disabled>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">RGHS No.</label>
+                       <input type="text" name="text" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false" disabled>
+                     </div>
+                   </div>
+                   <div class="m-10 d-flex">
+                     <button type="submit" class="btn btn-info btn-flat margin w-100">Submit</button>
+                     <button type="reset" class="btn btn-danger btn-flat margin w-100" onclick="reset">Reset</button>
+                   </div>
+                 </form>
+               </div>
+               <div class="tab-pane pad" id="Employee-Official-Detailsadd" role="tabpanel">
+                 <form action="">
+                   <!-- 1 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Entitlement Status </label>
+                       <input type="text" name="text" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 1 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Employee Type </label>
+                       <input type="text" name="text" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Service Category <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="text" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Sub Service Category/cadre </label>
+                       <input type="text" name="text" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 2 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label for="">Gazetted/ Non-Gazetted </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Gazetted</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Service Quota <span class="text-red">*</span>
+                       </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Blood Group</option>
+                         <option value="1">Yes</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                       </select>
+                     </div>
+                   </div>
+                   <!-- 3 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Parent Department</label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Finance Department </option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Current Department <span class="text-red">*</span>
+                       </label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Home Department</option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                       </select>
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Current Designation</label>
+                       <select class="form-select" aria-label="Default select example" class="form-control" id="">
+                         <option selected>Secretary</option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                       </select>
+                     </div>
+                   </div>
+                   <!-- 4 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Appointment Order No. <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="text" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Appointment Order Date <span class="text-red">*</span>
+                       </label>
+                       <input type="date" name="date" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Order Issuing Authority / Office </label>
+                       <input type="text" name="text" class="form-control" disabled required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 5 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>Appointing Authority <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="text" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Joining / Charge Taken Date <span class="text-red">*</span>
+                       </label>
+                       <input type="date" name="date" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Joining Time</label>
+                       <input type="text" name="text" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 6 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label for="">Annual Increment Opted Date <span class="text-red">*</span>
+                       </label>
+                       <input type="date" name="date" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Superanuation Date <span class="text-red">*</span>
+                       </label>
+                       <input type="date" name="date" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Belongs to Minority</label>
+                       <div class="form-control">
+                         <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                           <label class="form-check-label" for="inlineRadio1">Yes</label>
+                         </div>
+                         <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                           <label class="form-check-label" for="inlineRadio2">No</label>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <!-- 7 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>GRP/Pran Type <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="text" class="form-control" disabled required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">State Insurance Number <span class="text-red">*</span>
+                       </label>
+                       <input type="date" name="date" class="form-control" disabled required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">RGHS No.</label>
+                       <input type="text" name="text" class="form-control" disabled required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                   </div>
+                   <!-- 8 -->
+                   <div class="row m-2 mt-5">
+                     <div class="col-md-4">
+                       <label>GPF No.</label>
+                       <input type="text" name="text" class="form-control" disabled required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">Belt No. <span class="text-red">*</span>
+                       </label>
+                       <input type="text" name="date" class="form-control" disabled required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                     <div class="col-md-4">
+                       <label for="">PLI No.</label>
+                       <input type="text" name="text" class="form-control" disabled required="" data-validation-required-message="This field is required" aria-invalid="false">
+                     </div>
+                   </div>
+                    <div class="row m-2 mt-5">
+                    <div class="col-md-4">
+                      <label>I.A.S CPNF No.</label>
+                      <input type="text" name="text" class="form-control" disabled required="" data-validation-required-message="This field is required" aria-invalid="false">
+                    </div>
+                    </div>
+                   <div class="m-10 d-flex">
+				           	<button type="submit" class="btn btn-info btn-flat margin w-100">Submit</button>
+					          <button type="reset" class="btn btn-danger btn-flat margin w-100" onclick="reset">Reset</button>
+                   </div>
+                 </form>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <!-- end edit employee profile -->
+   </section>
+   <!-- /.content -->
+ </div>
+
+ 
+ <!-- Form validator JavaScript -->
+ <app-footer></app-footer>
+ <!-- /.content-wrapper --> 
